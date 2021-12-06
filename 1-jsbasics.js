@@ -1,18 +1,18 @@
 // Задание 1 - Спросить и вывести имя
 
-const userName = prompt("What is your name?");
+const userName = Number(prompt("What is your name?"));
 alert("Hello," + userName);
 
 // Задание 2 - Возвести число в степень
 
-const number = prompt("Какое число?");
-const power = prompt("В какую степень надо возвести?");
+const number = Number(prompt("Какое число?"));
+const power = Number(prompt("В какую степень надо возвести?"));
 alert(number ** power);
 
 // Задание 3 - Какое из чисел больше?
 
-const number1 = prompt("Введите первое число");
-const number2 = prompt("Введите второе число");
+const number1 = Number(prompt("Введите первое число"));
+const number2 = Number(prompt("Введите второе число"));
 
 if (number1 == number2) {
   alert("Два одинаковых числа!");
@@ -39,7 +39,7 @@ console.log(number3);
 // Задание 6 - равно ли число 10
 
 for (let i = 0; i < 10; i = i + 2) {
-  if (prompt("Число") == 10) {
+  if (Number(prompt("Число")) == 10) {
     console.log("Равно!");
   } else {
     console.log("Не равно!");
@@ -48,7 +48,7 @@ for (let i = 0; i < 10; i = i + 2) {
 
 // Задание 7 - Возвести в квадрат числа до 100
 
-const count = prompt("Сколько чисел возвести в квадрат?");
+const count = Number(prompt("Сколько чисел возвести в квадрат?"));
 if (count >= 100) {
   console.log("Слишком много чисел!!");
 } else {
