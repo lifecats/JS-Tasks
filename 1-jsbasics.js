@@ -9,7 +9,7 @@ const number = prompt("Какое число?");
 const power = prompt("В какую степень надо возвести?");
 alert(number ** power);
 
-// Задание 3
+// Задание 3 - Какое из чисел больше?
 
 const number1 = prompt("Введите первое число");
 const number2 = prompt("Введите второе число");
@@ -21,7 +21,7 @@ if (number1 == number2) {
 } else {
   alert(number2 + " больше!");
 }
-// Задание 4
+// Задание 4 - Кратно ли число
 if (number1 % number2 == 0) {
   console.log(number1 + " кратно " + number2);
 } else {
@@ -36,7 +36,7 @@ for (let i = 0; i < 10; i++) {
 }
 console.log(number3);
 
-// Задание 6
+// Задание 6 - равно ли число 10
 
 for (let i = 0; i < 10; i = i + 2) {
   if (prompt("Число") == 10) {
@@ -46,7 +46,7 @@ for (let i = 0; i < 10; i = i + 2) {
   }
 }
 
-// Задание 7
+// Задание 7 - Возвести в квадрат числа до 100
 
 const count = prompt("Сколько чисел возвести в квадрат?");
 if (count >= 100) {
