@@ -164,7 +164,7 @@ function pow(x, n) {
 */
 
 function ifInteger(x) {
-  return !(x && 1);
+  return !(x %% 1);
 }
 
 /* Задание 10
@@ -180,6 +180,6 @@ function ifInteger(x) {
 
 function nNumbers(n) {
   for (let i = 1; i < n; i = i + 0.5) {
-    console.log(i + (!(i && 1) ? " integer" : " decimal"));
+    console.log(i + (!(i %% 1) ? " integer" : " decimal"));
   }
 }
