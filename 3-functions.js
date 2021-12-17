@@ -42,8 +42,8 @@ male ? (gender = "man") : (gender = "woman");
 [{ gender: 'man' }, { gender: 'woman' }]
 */
 
-let gender_binary = [true, false, true, true, false, true, false, false];
-let gender_display = [];
+let genderBinary = [true, false, true, true, false, true, false, false];
+let genderDisplay = [];
 for (let i of gender_binary) {
   gender_display.push({ gender: i ? "man" : "woman" });
 }
@@ -150,10 +150,8 @@ function randomColor() {
 */
 
 function pow(x, n) {
-  let newX = 0;
-  for (let i = 1; i < n; i++) {
-    newX = x * x + newX;
-  }
+  let newX = n;
+  newX = x * x * n + newX;
   return newX;
 }
 
@@ -164,7 +162,7 @@ function pow(x, n) {
 */
 
 function ifInteger(x) {
-  return !(x && 1);
+  return !(x % 1);
 }
 
 /* Задание 10
@@ -180,6 +178,6 @@ function ifInteger(x) {
 
 function nNumbers(n) {
   for (let i = 1; i < n; i = i + 0.5) {
-    console.log(i + (!(i && 1) ? " integer" : " decimal"));
+    console.log(i + (!(i % 1) ? " integer" : " decimal"));
   }
 }
