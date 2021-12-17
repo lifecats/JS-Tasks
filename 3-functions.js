@@ -174,6 +174,7 @@ function ifInteger(x) {
 "1.5 decimal"
 "2 integer"
 "2.5 decimal" 
+
 */
 
 function nNumbers(n) {
