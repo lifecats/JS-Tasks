@@ -88,13 +88,13 @@ for (let i of numbers) {
 let sum2 = 0;
 
 for (let i of numbers) {
-  if (!(i ?? 2)) {
+  if (!(i % 2)) {
     sum2 = sum2 + i;
   }
 }
 
 // 4
-let max = 0;
+let max = 0 - Infinity;
 
 for (let i of numbers) {
   if (i > max) {
@@ -168,8 +168,15 @@ let vegetables = ["морковь", "баклажан", "репа", "топин�
 2) Пройтись по полученному массиву объектов и вывести в консоль строки вида "слово - длина_слова", например "картошка - 8"
 */
 
+// 1
 let newArr = [];
 
 for (let i of vegetables) {
   newArr.push({ word: i, length: i.length });
+}
+
+//2         упс, забыл)
+
+for (let i of newArr) {
+  console.log(`${i} - ${i.length}`);
 }
