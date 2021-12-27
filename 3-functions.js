@@ -45,7 +45,7 @@ male ? (gender = "man") : (gender = "woman");
 let genderBinary = [true, false, true, true, false, true, false, false];
 let genderDisplay = [];
 for (let i of gender_binary) {
-  gender_display.push({ gender: i ? "man" : "woman" });
+  genderDisplay.push({ gender: i ? "man" : "woman" });
 }
 
 /*
