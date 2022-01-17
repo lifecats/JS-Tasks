@@ -56,11 +56,11 @@ function getRandomInteger(min, max) {
 }
 
 const guessTheNumber = (num1) => {
-  if ((num1 > 10) | (num1 < 0)) return "Введите число от 1 до 10";
+  if (num1 > 10 || num1 < 0) return "Введите число от 1 до 10";
   else {
     let answer = getRandomInteger(0, 10);
-    if ((answer = num1)) return "Вы выйграли!!";
-    else return "Вы проиграли :(";
+    if (answer == num1) return "Вы выйграли!!";
+    else return "Вы не угадали, ваше число - " + answer;
   }
 };
 
@@ -84,13 +84,18 @@ const copyArr = (arr) => {
 
 const li = document.getElementsByTagName("li");
 
+let arr = [];
 for (let i of li) {
   if (i.innerText % 2 == 0) {
-    const newLi = document.createElement("ul");
-    newLi.innerText = i.innerText;
-    document.getElementsByTagName("ul")[0].appendChild(newLi);
+    arr.push(i);
   }
 }
+
+arr.forEach((e) => {
+  const newLi = document.createElement("ul");
+  newLi.innerText = e.innerText;
+  document.getElementsByTagName("ul")[0].appendChild(newLi);
+});
 
 /* 
 Задание 6
@@ -108,20 +113,21 @@ setInterval https://learn.javascript.ru/se...
 const form = document.createElement("form");
 const input = document.createElement("input");
 const select = document.createElement("select");
-const option1 = document.createElement("option");
-const option2 = document.createElement("option");
-const option3 = document.createElement("option");
 const ul = document.createElement("ul");
+
+function createOption(i) {
+  const option = document.createElement("option");
+  option.innerText = "Категория " + i;
+  select.appendChild(option);
+}
+
+for (let i = 1; i < 4; i++) {
+  createOption(i);
+}
 
 input.setAttribute("type", "text");
 ul.setAttribute("id", "ul");
-option1.innerText = "Категория 1";
-option2.innerText = "Категория 2";
-option3.innerText = "Категория 3";
 
-select.appendChild(option1);
-select.appendChild(option2);
-select.appendChild(option3);
 form.appendChild(select);
 document.body.appendChild(form);
 document.body.appendChild(ul);
