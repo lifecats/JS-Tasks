@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  transition: 0.3s;
+  width: 100vw;
+}
+.menu {
+  background: #000;
+  color: #fff;
+  width: 25vw;
+  height: 100vh;
+  top: 0;
+  position: absolute;
+  transition: 0.3s;
+  left: -25vw;
+  visibility: hidden;
+}
+
+.menuOpen {
+  visibility: visible;
+  left: 0vw;
+}
+
+.mainOpen {
+  width: 75vw;
+}

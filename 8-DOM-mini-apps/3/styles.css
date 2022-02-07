@@ -1,0 +1,43 @@
+#menu {
+  border: none;
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+  background: #fff;
+  font-weight: 700;
+}
+
+#menuBox {
+  width: 350px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 10px;
+}
+
+input {
+  display: inline;
+  background-color: transparent;
+  height: 50px;
+  width: 80%;
+  box-sizing: border-box;
+  border: none;
+  padding: 15px;
+  margin: 0;
+  transition: background 0.3s;
+}
+
+input:focus {
+  background-color: #fff;
+  outline: none;
+}
+
+#menuBox img {
+  display: inline;
+  margin: 0;
+  width: 15%;
+  box-sizing: border-box;
+  border: none;
+  width: 25px;
+  height: 25px;
+  vertical-align: text-bottom;
+  margin: 0 10px;
+}
