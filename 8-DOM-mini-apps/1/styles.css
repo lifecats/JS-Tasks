@@ -23,7 +23,7 @@ body {
 }
 
 .top button:hover {
-  transform: translateY(-10px);
+  transform: scale(110%);
 }
 
 .bottom {
