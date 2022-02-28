@@ -8,8 +8,8 @@ let tasks = [];
 
 // task 2
 // все строчки с localStorage тоже относятся к заданию 2 :)
-if (localStorage.getItem("tasks") !== undefined) {
-  tasks = JSON.parse(localStorage.getItem("tasks"));
+if (localStorage.tasks) {
+  tasks = JSON.parse(localStorage.tasks);
   renderTasks();
 }
 
@@ -21,21 +21,21 @@ function addLi(e) {
   checkbox.addEventListener("change", (e2) => {
     if (e2.target.checked === true) {
       e.completed = true;
-      var filtered = tasks.filter(function (val) {
+      let filtered = tasks.filter(function (val) {
         return val != e;
       });
       filtered.push(e);
       tasks = filtered;
-      localStorage.setItem("tasks", JSON.stringify(tasks));
+      localStorage.tasks = JSON.stringify(tasks);
       renderTasks();
     } else {
       e.completed = false;
-      var filtered = tasks.filter(function (val) {
+      let filtered = tasks.filter(function (val) {
         return val != e;
       });
       filtered.unshift(e);
       tasks = filtered;
-      localStorage.setItem("tasks", JSON.stringify(tasks));
+      localStorage.tasks = JSON.stringify(tasks);
       renderTasks();
     }
   });
@@ -49,11 +49,11 @@ function addLi(e) {
   const button = document.createElement("button");
   button.innerText = "X";
   button.addEventListener("click", () => {
-    var filtered = tasks.filter(function (val) {
+    let filtered = tasks.filter(function (val) {
       return val != e;
     });
     tasks = filtered;
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+    localStorage.tasks = JSON.stringify(tasks);
     renderTasks();
   });
   newLi.appendChild(button);
@@ -69,7 +69,7 @@ function renderTasks() {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   tasks.unshift({ task: input.value, completed: false });
-  localStorage.setItem("tasks", JSON.stringify(tasks));
+  localStorage.tasks = JSON.stringify(tasks);
   input.value = null;
   renderTasks();
 });
@@ -84,7 +84,7 @@ button.addEventListener("click", () => {
     newArr.push(e);
   });
   tasks = newArr;
-  localStorage.setItem("tasks", JSON.stringify(tasks));
+  localStorage.tasks = JSON.stringify(tasks);
   renderTasks();
 
   //* with querySelector()
